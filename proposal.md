@@ -4,26 +4,7 @@
 
 Sean Davern<br/>Seattle, Fall Cohort, weeks 6.5-9
 
-The words faith, hope and love show up prominently in a collection[1] of 2,467 TED talk titles, descriptions and transcripts[2]:
-
-```
-Titles that contain the words:
-  faith 5
-  hope 5
-  love 35
-  faith, hope or love 45
-```
-
-```
-Descriptions that contain the words:
-  faith 13
-  hope 66
-  love 114
-  faith & hope 2
-  hope & love 2
-  faith & love 1
-  faith, hope & love 0
-```
+The words faith, hope and love show up prominently in a collection[1] of 2,467 TED talk transcripts[2]:
 
 ```
 Transcripts that contain the words:
@@ -33,12 +14,15 @@ Transcripts that contain the words:
   faith & hope 88
   hope & love 520
   faith & love 101
-  faith, hope and love 56
+  faith, hope & love 56
+  faith or hope or love 1712
 ```
 
-I propose using NLP to process the languange content (transcripts) of the collection of TED talks to assess the types of faith, hope and love the talks describe.  This analysis would use unsupervised learning techniques, e.g. clustering, to hopefully differentiate and group the kinds of love, hope and faith the talks were discussing.  For example, are the authors describing their love for something, encouraging the expression love, or talking about love in some other way?  I'd then use supervised learning with this output and talk ratings and views as a way to assess popularity and/or audience reaction to the groups.
+I propose using NLP to process the languange content (transcripts) of the collection of TED talks to assess how the authors talk about each of faith, hope and love.  This analysis would use unsupervised learning techniques, e.g. clustering, to hopefully differentiate and group clusters involving faith, hope and love the talks were discussing.  For example, are the authors describing their love for something, encouraging the expression love, or talking about love in some other way?  My hope is that this differentiation is correlated with what makes talks rate highly or affect popularity.
 
-The goal of the overall analysis is to see if viewers are resonating with or enjoying any particular type or collections of  what I believe are core human values.
+As a secondary goal, I'd then use supervised learning with the clustering output, talk ratings and views as a way to assess popularity and/or audience reaction to the groups.
+
+The overall goal of the analysis is to see if viewers are resonating with or enjoying any particular type or collections of  what I believe are three core human values.  If so, the analysis can be used to adapt or assess recommendations.
 
 ## Data
 
