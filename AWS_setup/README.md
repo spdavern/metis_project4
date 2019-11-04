@@ -74,15 +74,15 @@ HostName 18.216.164.22 # use your IP instead
 		ubuntu@ip-172-31-38-29:~$
 		```
 
+sudo apt update
+sudo apt install python3-pip
 
 
-
-
-	5. Secury copying the eMacbook Pro to AWS: 
-	`scp -i ~/.ssh/aws_key.pem environment.yml ubuntu@54.202.76.199:/home/ubuntu/environment.yml
-
-
-
+5. Secury copying from the eMacbook Pro to AWS:
+  
+	```
+	scp -i ~/.ssh/aws_key.pem environment.yml ubuntu@54.202.76.199:/home/ubuntu/environment.yml
+	```
 
 
 
