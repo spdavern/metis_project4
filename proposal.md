@@ -49,4 +49,4 @@ ted_main.csv: comments, **description**, duration, event, film_date, languages, 
 transcripts.csv: **transcript**, url
 
 [^1]:Banik, Rounak, TED Talks: Data about TED Talks on the TED.com website until September 21st, 2017, [kaggle data set](https://www.kaggle.com/rounakbanik/ted-talks).
-[^2]:Davern, Sean, [proposal_EDA](), 04Nov2019.
+[^2]:Davern, Sean, [proposal_EDA](https://github.com/spdavern/metis_project4/blob/master/proposal_EDA.ipynb), 04Nov2019.
