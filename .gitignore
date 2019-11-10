@@ -1,2 +1,4 @@
-.ipynb_checkpoints
+.ipynb_checkpoints/
 .ipynb_checkpoints/*
+scikit-learn_example/
+scikit-learn_example/*
