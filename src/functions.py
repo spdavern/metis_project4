@@ -31,7 +31,7 @@ def get_sents(df_with_transcript,word,sentences_before=2,sentences_after=None):
     for i, row in df_with_transcript.iterrows():
         talk = df_with_transcript.loc[i].transcript
         sentences = pd.DataFrame(sent_tokenize(talk))
-        sentences_with_word = sentences[sentences[0].str.contains(word,case=False)]
+        sentences_with_word = sentences[sentences[0].str.contains(r'\blove',case=False)]
         output.loc[i,'n_'+word+'_sents'] = len(sentences_with_word)
         snippet_with_word = sentences_with_word.copy()
         for j in sentences_with_word.index:
