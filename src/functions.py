@@ -31,6 +31,7 @@ def get_sents(df_with_transcript,word,sentences_before=2,sentences_after=None):
     for i, row in df_with_transcript.iterrows():
         talk = df_with_transcript.loc[i].transcript
         sentences = pd.DataFrame(sent_tokenize(talk))
+        output.loc[i,'sentences'] = len(sentences)
         sentences_with_word = sentences[sentences[0].str.contains(r'\blove',case=False)]
         output.loc[i,'n_'+word+'_sents'] = len(sentences_with_word)
         snippet_with_word = sentences_with_word.copy()
@@ -39,6 +40,7 @@ def get_sents(df_with_transcript,word,sentences_before=2,sentences_after=None):
             upper_bound = min(j+sentences_after+1,len(sentences))
             snippet_with_word.loc[j,0] = sentences[lower_bound:upper_bound][0].str.cat(sep=' ')
         output.loc[i,word] = snippet_with_word[0].str.cat(sep=' ')
+    output=output.astype({'sentences':'int32','n_love_sents':'int32'})
     return output
 
 def display_topics(model, feature_names, num_top_words, topic_names=None):
