@@ -69,6 +69,8 @@ def display_topics(model, feature_names, num_top_words, topic_names=None):
 
 def unit_norm(df,demean=False):
     """Returns a pandas dataframe with df[0],df[1] divided by sqrt(df[0]^2+df[1]^2)
+    ****  This function was abandoned for sklearn.preprocessing.normalize which also handles 
+          the higher dimensional cases. ****
     ------
     inputs 
         df: a pandas dataframe with columns named 0 and 1
